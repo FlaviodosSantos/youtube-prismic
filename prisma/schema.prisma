@@ -19,3 +19,12 @@ model User {
 
   @@map("users")
 }
+
+model Movies {
+  id String @id @default(uuid())
+  title String @unique
+  duration Int
+  release_date DateTime
+
+  @@map("movies")
+}
